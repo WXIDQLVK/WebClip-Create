@@ -1142,6 +1142,34 @@
       stroke-width: 1.9;
     }
 
+    /* 设置页深色模式 */
+    body.dark #pageSettings,
+    body.dark #pageSettings .page-header,
+    body.dark #pageSettings .content {
+      background: #1c1c1e;
+    }
+
+    body.dark #pageSettings .settings-group {
+      background: #2c2c2e;
+    }
+
+    body.dark #pageSettings .settings-label {
+      color: #f5f5f7;
+    }
+
+    body.dark #pageSettings .settings-section-title {
+      color: #98989f;
+    }
+
+    body.dark #pageSettings .settings-item + .settings-item {
+      border-top-color: rgba(255,255,255,0.10);
+    }
+
+    body.dark #pageSettings .settings-value,
+    body.dark #pageSettings .settings-arrow {
+      color: #98989f !important;
+    }
+
     /* 应用页顶部使用无背景的 iOS 图标按钮 */
     #pageHome .header-icon-btn {
       background: transparent;
