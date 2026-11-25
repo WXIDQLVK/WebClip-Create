@@ -3238,8 +3238,20 @@
     setupLiquidTabDrag();
     // 初始化指示器位置（等布局完成）
     requestAnimationFrame(() => updateTabIndicator('pageMonitor', true));
+    // 已停用网页离线缓存：注销旧 Service Worker 并清理旧缓存。
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+      window.addEventListener('load', async () => {
+        try {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(registrations.map(registration => registration.unregister()));
+          if ('caches' in window) {
+            const cacheKeys = await caches.keys();
+            await Promise.all(cacheKeys.map(cacheKey => caches.delete(cacheKey)));
+          }
+        } catch (e) {
+          // 清理失败不影响网页在线使用。
+        }
+      });
     }
   </script>
 </body>
