@@ -2238,7 +2238,7 @@
           <div class="config-info">
             <div class="config-name">${escapeHtml(item.desktopName || item.configName)}</div>
             <div class="config-desc">${escapeHtml(item.webUrl)}</div>
-            <div class="config-time">${formatTime(item.createdAt)}</div>
+            <div class="config-time">${escapeHtml(item.description || '安装后在桌面生成网页快捷方式')}</div>
           </div>
           <button class="open-btn" data-url="${escapeHtml(item.webUrl)}">${t('open')}</button>
           <button class="delete-btn" data-id="${item.id}"></button>
