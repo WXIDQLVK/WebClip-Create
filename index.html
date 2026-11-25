@@ -12,7 +12,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <style>
     :root {
-      --accent: #007aff;
+      --accent: #3A8DFF;
       --accent-light: rgba(0, 122, 255, 0.18);
       --accent-soft: rgba(0, 122, 255, 0.08);
       --accent-border: rgba(0, 122, 255, 0.22);
@@ -992,7 +992,7 @@
       background: transparent;
       font-size: 17px;
       font-weight: 600;
-      color: #007aff;
+      color: #3A8DFF;
       cursor: pointer;
       font-family: inherit;
       -webkit-appearance: none;
@@ -1769,7 +1769,7 @@
     </div>
   </div>
 
-  <input type="color" id="colorPicker" value="#007aff">
+  <input type="color" id="colorPicker" value="#3A8DFF">
   <input type="file" id="importFileInput" accept=".mobileconfig,application/x-apple-aspen-config" style="display:none;">
 
   
@@ -2601,7 +2601,7 @@
     const colorPicker = document.getElementById('colorPicker');
 
     function applyAccent(color) {
-      if (!color || color[0] !== '#' || color.length < 7) color = '#007aff';
+      if (!color || color[0] !== '#' || color.length < 7) color = '#3A8DFF';
       const r = parseInt(color.slice(1,3),16);
       const g = parseInt(color.slice(3,5),16);
       const b = parseInt(color.slice(5,7),16);
@@ -2639,12 +2639,12 @@
       const s = getSettings();
       s.darkMode = isDark;
       saveSettings(s);
-      applyAccent(s.accent || colorPicker.value || '#007aff');
+      applyAccent(s.accent || colorPicker.value || '#3A8DFF');
     });
 
     function openColorPicker() {
       try {
-        colorPicker.value = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#007aff';
+        colorPicker.value = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#3A8DFF';
       } catch (e) {}
       // iOS 需要在用户手势里同步触发
       colorPicker.focus();
@@ -3239,7 +3239,7 @@
         document.getElementById('themeColorMeta').setAttribute('content', '#1c1c1e');
         document.getElementById('statusBarStyle').setAttribute('content', 'black');
       }
-      applyAccent(s.accent || '#007aff');
+      applyAccent(s.accent || '#3A8DFF');
       if (s.allowDelete !== undefined) document.getElementById('allowDelete').checked = s.allowDelete;
       if (s.fullscreen !== undefined) document.getElementById('fullscreen').checked = s.fullscreen;
       if (s.ignoreScope !== undefined) document.getElementById('ignoreScope').checked = s.ignoreScope;
