@@ -1129,6 +1129,17 @@
 
     body.dark .tab-item { color: #98989f; }
     body.dark .tab-item.active { color: var(--accent); }
+    /* 更醒目的启动按钮 */
+    .open-btn {
+      min-width: 104px;
+      height: 44px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
     /* 更圆润的 iOS 风格卡片边框 */
     .config-card,
     .tool-card,
@@ -3019,7 +3030,7 @@
     const I18N = {
       'zh-Hans': {
         update: '更新', apps: '应用', create: '创建', plugins: '工具', settings: '设置',
-        search: '搜索', open: '打开', install: '安装', edit: '编辑', done: '完成',
+        search: '搜索', open: '启动', install: '安装', edit: '编辑', done: '完成',
         appearance: '外观', darkMode: '深色模式', colorTheme: '颜色主题',
         webclipOpts: 'WebClip 选项', allowDelete: '允许删除', fullscreen: '全屏模式', ignoreScope: '忽略范围',
         general: '通用', notification: '通知', language: '语言',
@@ -3035,7 +3046,7 @@
       },
       'zh-Hant': {
         update: '更新', apps: '應用', create: '創建', plugins: '工具', settings: '設置',
-        search: '搜索', open: '打開', install: '安裝', edit: '編輯', done: '完成',
+        search: '搜索', open: '啟動', install: '安裝', edit: '編輯', done: '完成',
         appearance: '外觀', darkMode: '深色模式', colorTheme: '顏色主題',
         webclipOpts: 'WebClip 選項', allowDelete: '允許刪除', fullscreen: '全屏模式', ignoreScope: '忽略範圍',
         general: '通用', notification: '通知', language: '語言',
@@ -3051,7 +3062,7 @@
       },
       en: {
         update: 'Updates', apps: 'Apps', create: 'Create', plugins: 'Tools', settings: 'Settings',
-        search: 'Search', open: 'Open', install: 'Install', edit: 'Edit', done: 'Done',
+        search: 'Search', open: 'Launch', install: 'Install', edit: 'Edit', done: 'Done',
         appearance: 'Appearance', darkMode: 'Dark Mode', colorTheme: 'Accent Color',
         webclipOpts: 'WebClip Options', allowDelete: 'Allow Removal', fullscreen: 'Fullscreen', ignoreScope: 'Ignore Scope',
         general: 'General', notification: 'Notifications', language: 'Language',
