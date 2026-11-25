@@ -1129,6 +1129,21 @@
 
     body.dark .tab-item { color: #98989f; }
     body.dark .tab-item.active { color: var(--accent); }
+    /* 修复底部导航内容被裁切 */
+    .tab-bar-wrapper {
+      padding-bottom: max(8px, env(safe-area-inset-bottom));
+    }
+
+    .tab-bar {
+      height: 64px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .tab-item {
+      height: 58px;
+    }
+
     /* 更醒目的启动按钮 */
     .open-btn {
       min-width: 76px;
