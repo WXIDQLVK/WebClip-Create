@@ -1400,7 +1400,7 @@
   <div class="phone-frame">
 
 
-    <div class="page active" id="pageMonitor">
+    <div class="page" id="pageMonitor">
       <div class="page-header">
         <div class="header-top">
           <div class="header-top-left">
@@ -1440,7 +1440,7 @@
       </div>
     </div>
 
-    <div class="page" id="pageHome">
+    <div class="page active" id="pageHome">
       <div class="page-header">
         <div class="header-top">
           <div class="header-top-left">
@@ -1665,7 +1665,7 @@
       <div class="tab-bar" id="tabBar">
         <div class="tab-indicator" id="tabIndicator"></div>
 
-        <div class="tab-item active" data-page="pageMonitor">
+        <div class="tab-item" data-page="pageMonitor">
           <div class="tab-icon">
             <!-- 更新：实心循环箭头 -->
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.65 6.35A7.95 7.95 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35Z"/></svg>
@@ -1673,12 +1673,12 @@
           <div>更新</div>
         </div>
 
-        <div class="tab-item" data-page="pageHome">
+        <div class="tab-item" data-page="pageTools">
           <div class="tab-icon">
-            <!-- 应用：实心九宫格 -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect fill="currentColor" x="3" y="3" width="7.2" height="7.2" rx="2"/><rect fill="currentColor" x="13.8" y="3" width="7.2" height="7.2" rx="2"/><rect fill="currentColor" x="3" y="13.8" width="7.2" height="7.2" rx="2"/><rect fill="currentColor" x="13.8" y="13.8" width="7.2" height="7.2" rx="2"/></svg>
+            <!-- 工具：扳手与螺丝刀 -->
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m14.7 5.1 4.2 4.2M13.2 6.6l-7.8 7.8a2.1 2.1 0 0 0 0 3l1.2 1.2a2.1 2.1 0 0 0 3 0l7.8-7.8M4.2 20.2l3.6-.8-3-3-.8 3.6Z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="m15.4 4.4 1.1-1.1a2.2 2.2 0 0 1 3.1 0l1.1 1.1a2.2 2.2 0 0 1 0 3.1l-1.1 1.1"/></svg>
           </div>
-          <div>应用</div>
+          <div>工具</div>
         </div>
 
         <div class="tab-item" data-page="pageCreate">
@@ -1689,12 +1689,12 @@
           <div>创建</div>
         </div>
 
-        <div class="tab-item" data-page="pageTools">
+        <div class="tab-item active" data-page="pageHome">
           <div class="tab-icon">
-            <!-- 工具：扳手与螺丝刀 -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m14.7 5.1 4.2 4.2M13.2 6.6l-7.8 7.8a2.1 2.1 0 0 0 0 3l1.2 1.2a2.1 2.1 0 0 0 3 0l7.8-7.8M4.2 20.2l3.6-.8-3-3-.8 3.6Z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="m15.4 4.4 1.1-1.1a2.2 2.2 0 0 1 3.1 0l1.1 1.1a2.2 2.2 0 0 1 0 3.1l-1.1 1.1"/></svg>
+            <!-- 应用：实心九宫格 -->
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect fill="currentColor" x="3" y="3" width="7.2" height="7.2" rx="2"/><rect fill="currentColor" x="13.8" y="3" width="7.2" height="7.2" rx="2"/><rect fill="currentColor" x="3" y="13.8" width="7.2" height="7.2" rx="2"/><rect fill="currentColor" x="13.8" y="13.8" width="7.2" height="7.2" rx="2"/></svg>
           </div>
-          <div>工具</div>
+          <div>应用</div>
         </div>
 
         <div class="tab-item" data-page="pageSettings">
@@ -3236,7 +3236,7 @@
     renderMonitor();
     setupLiquidTabDrag();
     // 初始化指示器位置（等布局完成）
-    requestAnimationFrame(() => updateTabIndicator('pageMonitor', true));
+    requestAnimationFrame(() => updateTabIndicator('pageHome', true));
     // 已停用网页离线缓存：注销旧 Service Worker 并清理旧缓存。
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', async () => {
