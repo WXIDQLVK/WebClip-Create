@@ -1129,6 +1129,48 @@
 
     body.dark .tab-item { color: #98989f; }
     body.dark .tab-item.active { color: var(--accent); }
+    /* 设置页改为 iOS 系统白色分组样式 */
+    #pageSettings {
+      background: #f2f2f7;
+    }
+
+    #pageSettings .page-header,
+    #pageSettings .content {
+      background: #f2f2f7;
+    }
+
+    #pageSettings .settings-content {
+      padding-top: 12px;
+    }
+
+    #pageSettings .settings-group {
+      background: #ffffff;
+      border-radius: 22px;
+      box-shadow: none;
+    }
+
+    #pageSettings .settings-item + .settings-item {
+      border-top-color: rgba(60, 60, 67, 0.16);
+    }
+
+    #pageSettings .settings-section-title {
+      color: #8e8e93;
+      font-size: 13px;
+      letter-spacing: 0;
+    }
+
+    #pageSettings .settings-label {
+      color: #1c1c1e;
+    }
+
+    #pageSettings .settings-icon svg {
+      stroke: var(--accent);
+    }
+
+    #pageSettings .settings-value {
+      color: #8e8e93 !important;
+    }
+
     /* 更醒目的启动按钮 */
     .open-btn {
       min-width: 76px;
